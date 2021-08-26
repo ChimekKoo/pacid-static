@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" style="width: 1000px">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <title>{{ pacid['name']['first'] }}&nbsp;{{ pacid['name']['last'] }}&nbsp;{{ pacid['id'] }} - Pactum ID Card</title>
+
+    <style>
+
+    .center {
+        justify-content: center;
+        align-items: center;
+    }
+
+    small {
+        font-size: 30px;
+    }
+
+    </style>
+
+</head>
+<body style="font-family: 'Open Sans', sans-serif; font-size: 48px;">
+    <hr>
+    <div style="padding:10px; display:flex;" class="center">
+    
+        <div style="padding:5px; display:flex;">
+            <img src="{{ pacid['qr_path'] }}" alt="QR code" class="center" width="300px" height="300px">
+        </div>
+
+        <div style="padding:50px;" class="center">
+            <div style="display:block; margin-bottom: 30px; font-size: 28px;" class="center">Pactum ID Card</div>
+
+            <div style="display:block; margin-bottom: 10px;" class="center">{{ pacid['name']['first'] }}&nbsp;{{ pacid['name']['last'] }}</div>
+            <div style="display:block;" class="center"><small>ID:</small>&nbsp;{{ pacid['id'] }}</div>
+        </div>
+
+    </div>
+    <hr>
+</body>
+</html>
